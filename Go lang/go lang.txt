@@ -1,0 +1,201 @@
+values can be written into code as is, and are called literals. They are literally what they say they are. Naming a value in Go means creating a word that will represent that value.
+literal (aka unnamed) values
+
+A number or string without a name is called a “literal”.
+We use the const keyword to create a constant. 
+Constants have names without spaces: spaces aren’t allowed! 
+
+Floats (and complex numbers) do not have minimum or maximum values, the difference between float32 and float64 reflect how much data it uses to ensure the precision of the value. 
+Integers are further broken down into two categories: signed and unsigned.
+A variable is a named value (like a constant) with the added feature that it can change during the running of a program. 
+
+Variables are defined with the var keyword and two pieces of information: the name that we will use to refer to them and the type of data stored in the variable. Since variables can be updated we don’t even need to assign a value initially.
+
+When the Go compiler raises an error the program’s binary cannot get created and without the binary, our computer cannot execute the program’s code. 
+Go tries to tell you what the issue is by offering you the following pieces of information: the name of the file where something went wrong, the line number in that file where Go noticed an issue, and the column number (the number of characters from the left) 
+on that line where the error occurred. One common error occurs when Go language’s compiler recognizes that there is a defined variable that isn’t used in the program. 
+An unused variable is a waste of memory, but it can also be a typo or an unintended omission. 
+Go only supports two float types: float32 and float64.
+
+Variables are placeholder names that we use to refer to values that we intend to update over the course of our program. Updating our variable is also called assigning a value to a variable.
+A string is Go’s type for storing and processing text. 
+the single-quote ' has a special other meaning and isn’t used to define strings
+Single-quotes are for a specific character (also called a rune)
+Note that + does not add in additional spaces or punctuation.
+
+Even before we assign anything to our variables they hold a value.
+All numeric variables have a value of 0 before assignment. String variables have a default value of "", which is also known as the empty string because it contains no characters. 
+Boolean variables have a default value of false.
+There is a way to declare a variable without explicitly stating its type using the short declaration := operator.if we know what value we want our variable to store when creating it.
+We used the := to create a variable and infer its type based on the value provided. 
+Floats created in this way are of type float64. Integers created in this way are either int32 or int64 
+Go also offers a separate syntax to declare a variable and infer its type using the var keyword and the = operator.
+
+Error messages first display the file name, then the line, then the column, then the message indicating what has gone wrong.
+
+By providing the type int or uint, Go will check to see if the computer architecture is running on is 32-bit or 64-bit. Then it will either provide a 32-bit int (or uint) or a 64-bit one depending on the computer itself.
+It’s recommended to use int unless there’s a reason to specify the size of the int
+
+Variables are different from constants because we can update them. This update feature becomes incredibly important when we need to use the original value of a variable for a calculation (or any general manipulation) 
+and then update the variable to store the newly calculated value.
+
+Updating a variable by adding another number to itself and saving the new value is so common that Go has a shorthand for it, the += operator.
+We can also do the same for strings (i.e. concatenating strings together)
+
+Go actually allows us to declare multiple variables on a single line
+
+variables are then assigned their respective values based on the ordering of variables and value. 
+
+
+
+
+
+In our terminal, we type in go build followed by the name of our file
+While nothing obvious is shown after we run our command, Go has created our program’s executable file.To execute the file, we call:
+./filename
+
+But what happens if we ever wanted to change our program? We would have to compile another executable file and then run that file. Imagine having to do that every single time!
+The go run command compiles the code (like go build) and executes it. Unlike go build, go run will NOT create an executable file in our current folder.
+Each package is like a directory: .go files to do with one part of your program can go in one package
+
+
+
+Before anything, we should declare our package information. In Go, this is done with the line package main. 
+This line is called a package declaration and it tells the Go compiler to which package this ‘.go’ file belongs.
+import fmt to print out our data to the terminal.
+The import keyword allows us to use code from other packages
+
+Note how the package name is enclosed with double quotes ".
+We use the func keyword to declare the Go function main:
+
+Normally when we write functions, you need to write code to invoke them, otherwise they are unused. However, the main function is different if it resides in the main package. 
+When compiled, an executable is produced, and when run, the executable uses the main function as the starting point.
+Let’s define our function using the func keyword, followed by the name main, a set of empty parentheses (), and a set of curly braces {}.
+
+Importing Multiple Packages
+To import multiple packages, we can add multiple import statements: Or use a single import with parentheses
+We can also provide an alias to a package by specifying an alias name before the package name.
+
+
+Try to make code as clean and self-explanatory before adding comments. They should be the icing on the cake rather than the filling!
+Line Comments //
+Block Comments start with a /* and end with a */
+
+
+For information about a package, use the command go doc followed by the package name.
+For information about a package function, use the command go doc followed by the package name, a period then the function name.
+
+
+The purpose of Go’s compiler is to translate Go code into binary code that computers understand.
+A package with the package main declaration will compile into an executable file.
+
+The go run command will run the program, but it will not build an executable file that we can keep.
+A library is a Go package that won’t create an executable file but contains code that we can use for our program.
+
+When would building an executable file using go build be preferable to go run?
+If the code is being used in production (users are interacting with it) then using an executable file is preferred.
+
+Println() prints its arguments (data provided within its parentheses ( )) with an included space in between each argument and 
+adds a line break at the end. times we might not want the default formatting. In such cases, using fmt.Print()
+Using fmt.Println() and fmt.Print() we have the ability to concatenate strings, With fmt.Printf(), we can interpolate strings, 
+or leave placeholders in a string and use values to fill in the placeholders.
+
+The %v portion is our placeholder and is known as a verb in Go. Verbs are identified by the combination of a % character followed by a letter. 
+The specific letter informs what goes fills in the placeholder.
+
+verb %T prints out the type of the second argument.
+Using %d we can interpolate a number into a string!
+With %f, we can limit how precise we are by including a value between the % and f like: %.2f. 
+
+methods that don’t print strings, but format them fmt.Sprint() and fmt.Sprintln().fmt.Sprintln() works like fmt.Sprint() but it automatically includes spaces between the arguments trailing and a leading space>>
+If we need to interpolate a string, without printing it, then we can use fmt.Sprintf().
+major difference is that fmt.Sprintf() returns its value instead of printing it out!
+
+.Scan() which allows us to get user input!
+fmt.Scan() expects addresses for arguments, hence the & before
+If we were expecting two values, we’d need to declare two variables ahead of time:
+
+we have an if statement that checks if the condition next to the if keyword is true. Then we have an opening curly brace { with code inside followed by a closing curly brace }. 
+If the condition is true, then the code in between the curly braces { } is executed. 
+Adding an else if statement allows us to check another condition after our if statement checks its condition.
+if  /else if/  else statements are read from top to bottom, so the first condition that evaluates to true is the only block of code that gets executed.
+The rest of the conditions are not evaluated. 
+We can provide a default option to our conditional (if statement) by adding an else statement:
+Immediately after the if statement’s closing brace is the else keyword and its opening brace, all on the same line. 
+The code inside the block will execute by default if the if condition is false. Notice, the else statement does not accept a condition.
+
+Comparison operators check between two operands and evaluate to a boolean.
+Logical operators check between two boolean values and return a single boolean.
+
+!=	Is NOT equal to
+When we use comparison operators, we check the left value against the right value. It can be helpful to think of comparison statements as questions. 
+When the answer is “yes”, the statement evaluates to true, and when the answer is “no”, the statement evaluates to false. 
+The combination of values and the operator is evaluated by Go’s compiler which looks at the left value, compares it to the right value, and decides on a true or false value.
+
+&& And   || Or   ! Not
+If the first operand in the || expression evaluates to true, the second operand won’t even be checked.
+the not (!) operator. It negates (reverses) the value of a boolean.
+
+The switch keyword initiates the statement and is followed by a value. the value after switch is compared to the value specified after each case, until there is a match.
+At the end of our switch statement is a default statement. If none of the cases are true, then the code in the default statement will run.
+
+We can also include a short variable declaration before we provide a condition in either if or switch statements. declaration separated from the condition using a semi-colon ;
+One thing to keep in mind when using the short variable declaration in if or switch statements is that the declared variable is scoped to the statement blocks. 
+variable is only accessible within the blocks of those statements and not anywhere else.
+
+Go has a math/rand library that helps us generate a random integer:
+rand.Intn() takes an argument of an integer. That argument determines the maximum value for what your random number will be.
+we saw how our random numbers weren’t entirely random. The reason for this behavior is due to how Go seeds or chooses a number as a starting point for generating random numbers. 
+By default, the seed value is 1. We can provide a new seed value using the method rand.Seed() and passing in an integer.
+each time we run our program, we also need a unique number as a seed. 
+The reason why we can use time to be our unique number is because it’s always a different time when our program is run! 
+
+It’s important to note that the code inside the function body does not run until we call the function. 
+
+You can only refer to variables or functions defined within a specific namespace.
+Scope is a concept that refers to where the values and functions are defined and where they can be accessed.
+when we return a value, we pass the value to another place in our code. A function can be given a return type, the type of a value that will be returned by the function. 
+At the call site, the return value can be stored within a variable of the same type as the function’s return.
+
+A return statement tells the function to pass back a value (or multiple values) and stops the function from executing any more code, i.e. if we put more code after our return statement, it would not run!
+********* Returning Values from Functions ***************
+
+Function parameters are variables that are used within the function
+When calling a function, we give arguments, which are the values that we want those parameter variables to take. 
+
+when we return multiple values, we use a single return keyword followed by the values separated by commas.
+
+We can delay a function call to the end of the current scope by using the defer keyword. defer tells Go to run a function, but at the end of the current function.
+
+If you want to challenge yourself more:
+
+Use Go’s -=, *=, /= operators to do some mathematical calculations.
+Using variables to customize a greeting message for yourself and other users.
+Edit how the current variables are declared and initialized (but keep the same functionality).
+
+Adding more variables that store a comic’s data (like the genre).
+Create another comic series, with own unique set of variables.
+Perform some computation using the age, grade, and pageNumber to calculate the cost of the comic book.
+
+Use another one of fmt’s methods.
+Find out how to interpolate a string that contains an % character.
+Create a program that greets a user and conducts a short conversation.
+
+Use comparison operators in a switch statement.
+Create a numeric grade to letter grade conditional (or vice versa).
+Create conditionals for a flow chart, e.g. what to do/check if your computer won’t power on.
+Create a conditional that prints the price of an item when a condition is matched.
+
+Change the maximum generated values and then adjust conditionals in response.
+Add more conditionals that account for more scenarios, e.g.
+What time of day is it?
+Does that affect the heist?
+Do the number of guards matter?
+
+Create a function that returns the area of any square.
+Create a function that returns both the area of a square and its perimeter.
+Create a function that contains a conditional statement and returns at different points of the conditional.
+
+Add a variable that keeps track of which planet your spaceship is on.
+Create a function that returns your spaceship back to your home planet.
+Add more destinations and allow for traveling between different planets.
