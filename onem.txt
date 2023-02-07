@@ -1,0 +1,30 @@
+Programming is a set of instructions used to solve a problem. 
+Mini CEOs
+MVP That means testing whatever the minimum version of your idea is, as quickly and inexpensively as possible, so that you don't fall into the trap of building something nobody wants. 
+To understand the target user.
+To understand the user's goals.
+To develop the features that designers and developers will eventually build.
+
+Information architecture is the design and organization of content, pages, and data into a structure that aids users understanding of a system.
+Wireframes. These are a visual guide that represents the skeletal framework of a website. They're immensely helpful for communicating ideas to developers so that they can, literally, see what their building. 
+Information Architecture (IA) puts our user ideas, features, and layout onto paper. IA is all about using deliverables (like wireframes, flow diagrams, and sitemaps) to communicate better with designers and 
+developers, and creating a visual blueprint for the project. 
+
+Visual Design takes the wireframes and features and ideas and bringing them to life. Design Comp. "Comp" is shorthand for comprehensive layout, and that's exactly what the design comp does. It lays out the full 
+look of a proposed page design for a client. About the only thing you can't do with it is click. 
+Style guide  is a document of code standards that details the various elements and patterns of a site or application.
+Design comp is a visual mock-up of a proposed web design.to establish what the website will ultimately look like.
+
+Comps are best if the client wants more control over the final product, or if development is being outsourced.
+Style guides are best if you want to be more agile to adapt to new pages and features as you expand and grow. 
+front-end developer: Cares about how things look 
+back-end developer: Cares about how things work
+Back end development deals with the server-side of an application and handles the “under the hood” operations that make a web application work
+Front end development focuses on the visual part of a web application—the part that the user sees and interacts with
+The back-end basically instructs your browser on how to get to where you want it to go. Its the brain that solves the problem. 
+
+The image tag does not have a closing tag. When we add an image with HTML we add the "src" (source) attribute to tell the website where the image is located. And than we add the "alt" (alternative text) attribute to describe the image.
+HTML Image 
+<img src="cat-image.jpg" alt="Cat Image">
+The "src" (source) attribute tells you're code where the image is located.
+While the "alt" (alternative text) attribute is used to describe the image.
