@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			<meta charset="utf-8">
+			<title>Mr. JavaScript</title>
+	</head>
+	<body>
+		<h1>I'm Javascript</h1>
+		
+		<a href="#" class="hello">Reset</a>
+		<!-- <a href="#" id="hello">Reset</a> -->
+
+		<a href="#" class="howareyou">Hey JavaScript, how ya feeling?</a>
+		<script type="text/javascript">
+			// var h1 = document.querySelector("h1");
+			// h1.innerHTML = "I'm alive!";
+			// console.log(h1);
+
+
+			var a = document.querySelector(".howareyou");
+			// var a = document.querySelector("#howareyou");
+			// var a = document.querySelector("#howareyou");
+			a.addEventListener('click',function(){
+
+				var h1 = document.querySelector("h1");
+				h1.innerHTML = "I'm alive!";
+				console.log(h1);
+
+			});
+			// var reset = document.getElementById("reset");
+			// var a = document.getElementsByClassName("howareyou");
+			// console.log(a[0]);
+
+			// a[0].addEventListener('click',function(){
+
+			// 	var h1 = document.querySelector("h1");
+			// 	h1.innerHTML = "I'm alive!";
+			// 	console.log(h1);
+
+			// });
+
+
+		</script>
+	</body>
+</html>
