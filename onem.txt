@@ -28,3 +28,47 @@ HTML Image
 <img src="cat-image.jpg" alt="Cat Image">
 The "src" (source) attribute tells you're code where the image is located.
 While the "alt" (alternative text) attribute is used to describe the image.
+
+the two main questions of UX: who are the users and what are their goals? It is only after answering these questions, that we can then start building features that match those goals.
+You can use Wufoo to make free forms to capture user information http://www.wufoo.com/
+Persona - A fictional character created to represent the different user types
+Native apps - Apps that run on an operating system.
+
+Low-level languages are closer to the native language of a computer 
+Machine code - The language that your computer reads.
+
+A CMS (Content Management System) is a software that facilitates creating, editing, organizing, and publishing content. It helps you update your site without having to touch code.
+WordPress, Squarespace, Expression Engine, and Drupal. 
+
+WordPress.com is free, easy to use, but not very customizable. 
+
+A technology stack or tech stack for short refers to a set of technologies, software, and tools that are used in the development and deployment of websites, apps, and other digital products. It is a combination of programming languages, libraries, frameworks, servers, patterns, UI/UX solutions, software, and tools used by the development team.
+Javscript behaviour of our site, html gives meaning to our content, css gives style to our content.
+JavaScript in the browser uses an event-driven programming model. An event is a signal that something has happened.
+JavaScript enables you to respond to events using Event Handlers. You can attach an event handler to the HTML element for which you want to respond to when a specific event occurs.
+Events - any action that causes something else to happen.
+
+ In JavaScript, you can write to the DOM (Document Object Model) 
+Variables - a value that can change, depending on conditions or information passed to the program.
+ variables as containers that hold information.
+variable is a storage location paired with an associated symbolic name, used to store information to be referenced and manipulated in a computer program. 
+
+what type of data is this ..
+In JavaScript, there are two different kinds of data: primitives, and objects. There are seven primitive data types: Boolean, Number, String, Null, Undefined, Symbol and bigint (newly introduced).
+Please note: if you put numerical values inside quotation marks, they will be handled as strings, not numbers. 
+function is a named section of a program that performs a specific task. 
+we'll be using the prompt() function to get input from a user.
+In JavaScript, you can have values of different types in the same array.
+
+DOM stands for Document Object Model. It is the data representation of the objects that comprise the structure and content of a document on the web.
+querySelector lets us grab HTML elements from the DOM. It returns the first Element within the document that matches the specified selector or group of selectors. If no matches are found, null is returned. 
+
+A Job Scorecard is a document that describes exactly what you want a person to accomplish in a role. 
+Git is a free and open-source distributed version control system
+
+ There are different platforms that provide version control repository hosting where you can upload and store your code, e.g. GitHub, Bitbucket, GitLab, etc.
+Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. There are different version control systems, e.g. CVS, SVN, Git, Mercurial, Bazaar, Monotone
+The addEventListener() method attaches an event handler to a specified element. It can be used to listen for when a user clicks on an element, when a user is typing, when the page fully loads, and much, much, more.
+
+Loops offer a quick and easy way to do something repeatedly until a certain condition is met. They can be used to execute a block of code a number of times.
+The setTimeout() method sets a timer which executes a function or specified piece of code once the timer expires.
